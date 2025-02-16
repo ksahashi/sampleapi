@@ -2,7 +2,7 @@ from fastapi import Depends, FastAPI, HTTPException, Security
 from fastapi.security import APIKeyHeader
 from routers import test
 from starlette.status import HTTP_403_FORBIDDEN
-from util import util
+from util import util, hoge
 
 correct_key: str = util.get_apikey()
 api_key_header = APIKeyHeader(name="Authorization", auto_error=False)
