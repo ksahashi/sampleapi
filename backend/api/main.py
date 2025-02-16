@@ -21,6 +21,7 @@ async def get_api_key(
 
 app = FastAPI()
 app.include_router(test.router, dependencies=[Depends(get_api_key)], tags=["Test"])
+app.include_router(hoge.router, dependencies=[Depends(get_api_key)], tags=["Hoge"])
 
 
 @app.get("/")
