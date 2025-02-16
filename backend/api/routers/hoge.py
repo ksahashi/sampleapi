@@ -1,4 +1,5 @@
 import os
+from typing import Dict
 
 from fastapi import APIRouter
 
@@ -7,7 +8,10 @@ router = APIRouter()
 
 @router.get("/v1/hoge")
 async def get_hoge() -> Dict:
-    return {
-        "name": "hoge",
-        "price": 1
-    }
+    if 1 else 2:
+        return {
+            "name": "hoge",
+            "price": 1
+        }
+    else:
+        return hoge;
